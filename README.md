@@ -3,6 +3,7 @@
 Projeto de análise de sentimento em reviews da B2W.
 
 ## Estrutura do Projeto
+
 sentiment-analysis-b2w-reviews/
 │
 ├── data/
