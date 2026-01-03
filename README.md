@@ -1,9 +1,6 @@
-# Análise de Sentimento - Reviews B2W
+## 📁 Estrutura do Projeto
 
-Projeto de análise de sentimento em reviews da B2W.
-
-## Estrutura do Projeto
-
+```text
 sentiment-analysis-b2w-reviews/
 │
 ├── data/
