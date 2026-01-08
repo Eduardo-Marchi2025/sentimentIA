@@ -54,7 +54,7 @@ sentiment-analysis-b2w-reviews/
 
 ## ▶️ Como Executar o Projeto no Google Colab
 
-### 1️⃣ Abrir o Notebook:
+###1️⃣ Abrir o Notebook:
 
 - Acesse este repositório no GitHub  
 - Clique no arquivo **`.ipynb`**  
@@ -64,7 +64,7 @@ sentiment-analysis-b2w-reviews/
 
 ---
 
-### 2️⃣ Instalar Dependências
+###2️⃣ Instalar Dependências
 
 Execute a primeira célula do notebook para instalar as bibliotecas necessárias:
 
