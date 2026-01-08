@@ -1,8 +1,11 @@
-# Sentiment Analysis B2W Reviews
+ # PROJETO SENTIMENTAPI: Análise Automatizada de Sentimentos
 
 ## 📌 Sobre o Projeto
-Este projeto aplica **técnicas de Processamento de Linguagem Natural (NLP)** e **Machine Learning** para realizar **análise de sentimentos** em avaliações de clientes.  
-O objetivo é classificar automaticamente as reviews como **positivas** ou **negativas**, auxiliando na compreensão da percepção dos consumidores.
+O presente projeto tem como objetivo o desenvolvimento de uma solução automatizada para classificação de sentimentos em textos.
+A solução desenvolvida consiste em um pipeline completo de classificação de sentimentos, capaz de receber textos escritos por clientes 
+e classificá-los de forma binária como **Positivos** ou **Negativos**, possibilitando sua integração com aplicações externas por meio de uma API simples.
+Foram aplicadas técnicas de **Processamento de Linguagem Natural (NLP)** e **Machine Learning** para realizar **Análise de Sentimentos** em avaliações reais de clientes,
+por meio do dataset **B2W Reviews**.  
 
 ---
 
@@ -40,58 +43,97 @@ sentiment-analysis-b2w-reviews/
 
 ## ⚙️ Tecnologias Utilizadas
 - **Python 3.9+**
-- **Pandas / NumPy** para manipulação de dados
-- **Scikit-learn** para modelagem e vetorização (TF-IDF)
-- **NLTK / SpaCy** para pré-processamento de texto
-- **Flask** para disponibilizar o modelo via API
-- **Jupyter Notebook** para experimentação
+- **Pandas / NumPy**
+- **matplotlib** 
+- **Scikit-learn** 
+- **NLTK** 
+- **Jupyter Notebook** 
+- **Joblib e ONNX**
+  
+---
+
+## ▶️ Como Executar o Projeto no Google Colab
+
+### 1️⃣ Abrir o Notebook:
+
+- Acesse este repositório no GitHub  
+- Clique no arquivo **`.ipynb`**  
+- Clique em **“Open in Colab”**  
+  ou abra manualmente em:  
+  [https://colab.research.google.com](https://colab.research.google.com/drive/1-SYVnlF0YSwYr3pq0gcc9TxUHoVJApLU?usp=sharing)
 
 ---
 
-## 🚀 Como Executar o Projeto
+### 2️⃣ Instalar Dependências
 
-### 1. Clonar o repositório
-```bash
-git clone https://github.com/seu-usuario/sentiment-analysis-b2w-reviews.git
-cd sentiment-analysis-b2w-reviews
+Execute a primeira célula do notebook para instalar as bibliotecas necessárias:
+
+```python
+!pip install pandas numpy scikit-learn nltk
+
+````
+
+###3️⃣ Upload do Dataset
+
+No Google Colab:
+
+- Clique no ícone de pastas (barra lateral esquerda)
+
+- Faça upload do arquivo .csv
+
+- Verifique se o caminho do arquivo corresponde ao usado no notebook
+
+Exemplo:
+```python
+df = pd.read_csv('/content/dataset.csv')
 ```
 
-### 2. Criar ambiente virtual e instalar dependências
-```bash
-python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
+###4️⃣ Execução do Notebook
 
-pip install -r requirements.txt
-```
+Execute todas as células em ordem, de cima para baixo
 
-### 3. Explorar os notebooks
-- Experimentos: `notebooks/experiments/`
-- Versão final: `notebooks/final/SentimentAnalysis_B2W_FINAL.ipynb`
+O notebook está organizado nas seguintes etapas:
 
-### 4. Rodar a API
-```bash
-cd api
-python app.py
-```
-A API estará disponível em: `http://127.0.0.1:5000/`
+- Carregamento dos dados
+- Carregamento e Inspeção Inicial dos Dados
+- Seleção e Limpeza dos Dados
+- Criação do Rótulo de Sentimento
+- Análise Exploratória (EDA)
+- Pré-processamento de Texto
+- Vetorização com TF-IDF
+- Treino e Teste
+- Treinamento do Modelo
+- Avaliação
+- Salvando o Modelo (para API)
+- Exemplo de Inferência
 
 ---
 
 ## 📊 Dataset
-O dataset utilizado contém avaliações de clientes da B2W.  
-Arquivo: `data/B2W-Reviews01.csv`  
-Cada linha corresponde a uma review com seu respectivo rótulo de sentimento.
+
+O conjunto de dados utilizado é composto por avaliações e comentários reais de clientes extraídos de um dataset da B2W Reviews.
+
+- Dataset: B2W-Reviews01
+- Autores: Real, L. , Oshiro, M. Mafra, A.
+- Arquivo: `data/B2W-Reviews01.csv`  
+- Plataforma: GitHub
+- Link: [Repositório do GitHub](https://github.com/b2wdigital/b2w-reviews01)
+
+Este projeto é de caráter educacional, e todos os créditos pelo conjunto de dados pertencem ao seu respectivo autor.
+
 
 ---
 
 ## 📈 Resultados
-- Modelo baseado em **TF-IDF + Classificador (Logistic Regression / SVM)**  
-- Métricas principais:
-  - **Acurácia:** ~XX%  
-  - **Precisão / Recall / F1-score:** disponíveis nos notebooks de experimentos
+- Acurácia: O resultado foi de aproximadamente 95% (0.9484).
 
----
+- Precisão (Precision): Para 'Negativo', foi de 0.92, e para 'Positivo', 0.96.
+
+- Recall (Sensibilidade): Para 'Negativo', foi de 0.91, e para 'Positivo', 0.97.
+
+- F1-score: Para 'Negativo', foi de 0.91, e para 'Positivo', 0.96.
+
+ ---
 
 ## 📄 Documentação
 Mais detalhes sobre o projeto podem ser encontrados em:  
